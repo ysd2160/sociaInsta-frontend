@@ -15,7 +15,7 @@ export const userApi = axios.create({
 })
 
 export const postApi = axios.create({
-    baseURL: "https://socioinsta-backend.onrender.com//v1/api/post",
+    baseURL: "https://socioinsta-backend.onrender.com/v1/api/post",
     withCredentials: true
 })
 
