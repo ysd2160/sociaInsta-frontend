@@ -13,7 +13,6 @@ const EditProfile = () => {
   const [data,setData] = useState({
     username:user?.username,
     email:user?.email,
-    password:user?.password,
     bio:user?.bio,
     file:user?.profilePic
   })
@@ -36,7 +35,7 @@ try {
   let formdata = new FormData()
   formdata.append("username",data.username)
   formdata.append("email",data.email)
-  formdata.append("password",data.password)
+  
   formdata.append("bio",data.bio)
   formdata.append("profilePic",data.file)
 
@@ -85,15 +84,7 @@ try {
              onChange={(e)=>onChangeHandler(e)}
 
              />
-              <input
-             type="text" 
-             placeholder='password...' 
-             name='password'
-             className='bg-gray-800 outline-none rounded-md border border-gary-500 p-2 text-xl  ' 
-             defaultValue={""}
-             onChange={(e)=>onChangeHandler(e)}
-
-             />
+             
               <input
              type="text" 
              placeholder='bio...' 
