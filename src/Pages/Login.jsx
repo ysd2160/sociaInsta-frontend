@@ -28,7 +28,7 @@ const Login = () => {
         try {
             setLoading(true)
             const response = await authApi.post("/login", data)
-            console.log(response.data.message);
+            console.log(response);
             setMessage(response.data.message)
             dispatch(loginUser(response.data.user))
             navigate("/")
